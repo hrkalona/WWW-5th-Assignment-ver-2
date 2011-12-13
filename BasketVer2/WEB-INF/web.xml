@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    Version="2.4">
+    <servlet>
+        <servlet-name>BasketPost</servlet-name>
+        <servlet-class>BasketVer2.BasketServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BasketPost</servlet-name>
+        <url-pattern>/Basket.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BasketGet</servlet-name>
+        <servlet-class>BasketVer2.BasketServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BasketGet</servlet-name>
+        <url-pattern>/getindex</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Project3Information</servlet-name>
+        <servlet-class>BasketVer2.InformationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Project3Information</servlet-name>
+        <url-pattern>/GetProject3Info.do</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>redirectLink3</param-name>
+        <param-value>https://hrkalona.wordpress.com/2011/12/06/www-5th-assignment/</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>BasketVer2.InformationServletContextListener</listener-class>
+    </listener>
+    
+    <servlet>
+        <servlet-name>SourceCodeProject3</servlet-name>
+        <servlet-class>BasketVer2.SourceCodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SourceCodeProject3</servlet-name>
+        <url-pattern>/project3ver2.rar</url-pattern>
+    </servlet-mapping>
+</web-app>
